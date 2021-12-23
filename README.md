@@ -1,5 +1,9 @@
 # PolynomialApproximation
-on Polynomial Approximation of Activation Function
+on Polynomial Approximation of Activation Function  
+  
+  
+See PolynomialsCompare.pdf and PolynomialsCompare.Octave   
+
 
 >> P_LG[-8, +8] = 0.7974683544 + 0.500000.*x + 0.0563686709.*x.*x;  
 
