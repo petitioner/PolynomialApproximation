@@ -1,0 +1,107 @@
+GNU Octave, version 4.4.1
+Copyright (C) 2018 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at https://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit https://www.octave.org/get-involved.html
+
+Read https://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+>> x = [-8: 0.01: +8];
+>> sigmoid = 1./( 1 + exp(-x) );
+>> polyfit(x, sigmoid, 9)
+ans =
+
+ Columns 1 through 7:
+
+   3.4341e-08  -2.4040e-21  -5.8527e-06   3.0569e-19   3.7462e-04  -1.1450e-17  -1.1621e-02
+
+ Columns 8 through 10:
+
+   1.1183e-16   2.3185e-01   5.0000e-01
+
+>> y = 3.4341e-08*x.^9  -2.4040e-21*x.^8  -5.8527e-06*x.^7 +  3.0569e-19*x.^6 +  3.7462e-04*x.^5-1.1450e-17*x.^4  -1.1621e-02*x.^3 + 1.1183e-16*x.^2  + 2.3185e-01*x.^1 +  5.0000e-01*x.^0;
+>> plot(x, y)
+>> hold on
+>> plot(x, sigmoid)
+>> polyfit(x, sigmoid, 11)
+ans =
+
+ Columns 1 through 9:
+
+  -0.00000  -0.00000   0.00000   0.00000  -0.00002  -0.00000   0.00064   0.00000  -0.01447
+
+ Columns 10 through 12:
+
+   0.00000   0.24029   0.50000
+
+>> output_precision(26);
+error: output_precision: arg must be less than or equal to 16
+>> output_precision(16);
+>> polyfit(x, sigmoid, 11)
+ans =
+
+ Columns 1 through 7:
+
+  -9.935476152456395e-10  -1.218117288970416e-22   2.010839465901885e-07   1.237619348684428e-20  -1.597507057561005e-05  -3.258452940370860e-19   6.417014221197733e-04
+
+ Columns 8 through 12:
+
+   0.000000000000000e+00  -1.447312423686313e-02   3.676482347459929e-17   2.402875477632921e-01   5.000000000000002e-01
+
+>> z = -9.935476152456395e-10*x.^11  -1.218117288970416e-22*x.^10  + 2.010839465901885e-07*x.^9  + 1.237619348684428e-20*x.^8  -1.597507057561005e-05*x.^7  -3.258452940370860e-19*x.^6+ 6.417014221197733e-04*x.^5  + 0.000000000000000e+00*x.^4  -1.447312423686313e-02*x.^3  + 3.676482347459929e-17*x.^2  + 2.402875477632921e-01*x.^1  + 5.000000000000002e-01*x.^0;
+>> plot(x,z)
+>> hold on
+>> plot(x, sigmoid)
+>> z = -9.935476152456395e-10*x.^11   + 2.010839465901885e-07*x.^9    -1.597507057561005e-05*x.^7  + 6.417014221197733e-04*x.^5    -1.447312423686313e-02*x.^3   + 2.402875477632921e-01*x.^1  + 5.000000000000002e-01*x.^0;
+>> plot(x,z)
+>> hold on
+>> plot(x, sigmoid)
+
+Step 0. Sigmoid ~ >> z = -9.935476152456395e-10*x.^11   + 2.010839465901885e-07*x.^9    -1.597507057561005e-05*x.^7  + 6.417014221197733e-04*x.^5    -1.447312423686313e-02*x.^3   + 2.402875477632921e-01*x.^1  + 5.000000000000002e-01*x.^0;
+
+>> z = -9.935476152456395e-10*x.^11   + 2.010839465901885e-07*x.^9    -1.597507057561005e-05*x.^7  + 6.417014221197733e-04*x.^5    -1.447312423686313e-02*x.^3   + 2.402875477632921e-01*x.^1  + 5.000000000000002e-01*x.^0;
+>> z'= -9.935476152456395e-10*11*x.^10   + 2.010839465901885e-07*9*x.^8    -1.597507057561005e-05*7*x.^6  + 6.417014221197733e-04*5*x.^4    -1.447312423686313e-02*3*x.^2   + 2.402875477632921e-01;
+
+>> z'= -1.092902376770203e-08*x.^10   + 1.809755519311696e-06*x.^8  +  1.118254940292703e-04*x.^6  + 3.208507110598867e-03*x.^4     -4.341937271058939e-02*x.^2   + 2.402875477632921e-01;
+
+
+poly3 = a + bx + cx^2;   poly3' = b + 2cx;
+Step 1. minimise: 
+	integral over the range [-8, +8]{ (z - poly3)^2 + (z' - poly3')^2 }.
+        =integral over the range [-8, +8]{ z*z + z'*z' - 2*z*poly3 - 2*z'*poly3' + poly3*poly3+ poly3'*poly3'}.
+
+	z*z + z'*z' is not important due to containing no parameters a, b and c.
+	As a result, it would be constant after integral over the range [-8, +8]
+
+Step 1. minimise:
+	integral over the range [-8, +8]{ - 2*z*poly3 - 2*z'*poly3' + poly3*poly3+ poly3'*poly3'}.
+
+
+
+	-2*z = -1.0  -0.48057508 .* x.^1 +  0.028946249 .* x.^3	 
+	       -0.0012834028 .* x.^5   +  3.195014E-5 .* x.^7  
+		-4.021679E-7 .* x.^9 +  1.9870952E-9 .* x.^11
+
+
+	-2*z'= -0.48057508  +  0.086838745 .* x.^2
+	       -0.006417014 .* x.^4  -2.2365099E-4 .* x.^6  
+	       -3.619511E-6 .* x.^8 +  2.1858048E-8 .* x.^10
+
+
+
+
+
+
+
+
+
+
+
