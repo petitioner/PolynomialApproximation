@@ -1,0 +1,30 @@
+24          0         288                  0                 6220.8                  36
+0         312           0             7084.8                   0                   156.0
+288         0      7372.8                  0         209729.82857142854            720.0
+0      7084.8           0         215950.62857142856           0                   3110.4
+6220.8      0    209729.82857142854    0             7038390.857142856             15552.0
+
+
+
+GNU Octave, version 4.4.1
+Copyright (C) 2018 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at https://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit https://www.octave.org/get-involved.html
+
+Read https://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+>> x = [-6:0.01:6];
+>> z = -0.13032511  + 0.67812810.*x +  0.24033072.*x.^2 + -0.00784439.*x.^3 + -0.00483659.*x.^4;
+>> plot(x, max(0,x))
+>> hold on
+>> plot(x,z)
+>>
