@@ -15,4 +15,4 @@
 
 # $$F^{'}_c = 5 \lambda b + 6 \lambda d +  \frac{3}{8} \lambda d +  \frac{1}{16} b +  \frac{1}{96}  d +  6 \lambda e^{-\frac{1}{2}} -  8 \lambda e^{-1} - 2.5  e^{\frac{1}{2}}  +  6.5 e^{-\frac{1}{2}}  -  2 \lambda e^{\frac{1}{2}}= 0$$
 
-# $$F^{'}_d = 6 \lambda c + \frac{3}{8} \lambda c   +  \frac{1}{16} a +  \frac{1}{96} c -  18 \lambda e^{-\frac{1}{2}} -  1.5 \lambda e^{-\frac{1}{2}}  +  30 \lambda e^{-1} +  6  e^{\frac{1}{2}} +  \frac{5}{4}  e^{\frac{1}{2}} -  18  e^{-\frac{1}{2}} - \frac{7}{4}  e^{-\frac{1}{2}} -  6 \lambda e +  6 \lambda e^{\frac{1}{2}} +  1.5 \lambda e^{\frac{1}{2}}$$
+# $$F^{'}_d = 6 \lambda c + \frac{3}{8} \lambda c   +  \frac{1}{16} a +  \frac{1}{96} c -  18 \lambda e^{-\frac{1}{2}} -  1.5 \lambda e^{-\frac{1}{2}}  +  30 \lambda e^{-1} +  6  e^{\frac{1}{2}} +  \frac{5}{4}  e^{\frac{1}{2}} -  18  e^{-\frac{1}{2}} - \frac{7}{4}  e^{-\frac{1}{2}} -  6 \lambda e +  6 \lambda e^{\frac{1}{2}} +  1.5 \lambda e^{\frac{1}{2}} = 0$$
