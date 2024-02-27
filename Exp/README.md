@@ -25,6 +25,6 @@
 
 # $$F^{'}_b = \frac{1}{2}  a +  (\frac{1}{16} +5 \lambda) c   -2 \lambda e^{-\frac{1}{2}} +2 \lambda e^{-1}   -2 \lambda e + 2 \lambda e^{\frac{1}{2}}  -0.170871 = 0$$
 
-# $$F^{'}_c = 5 \lambda b + 6 \lambda d +  \frac{3}{8} \lambda d +  \frac{1}{16} b +  \frac{1}{96}  d +  6 \lambda e^{-\frac{1}{2}} -  8 \lambda e^{-1}   -  2 \lambda e^{\frac{1}{2}}  -0.179354 = 0$$
+# $$F^{'}_c = (\frac{1}{16} +  5 \lambda ) b + (\frac{1}{96}  + 6 \lambda  +  \frac{3}{8} \lambda ) d +      6 \lambda e^{-\frac{1}{2}} -  8 \lambda e^{-1}   -  2 \lambda e^{\frac{1}{2}}  -0.179354 = 0$$
 
 # $$F^{'}_d = 6 \lambda c + \frac{3}{8} \lambda c   +  \frac{1}{16} a +  \frac{1}{96} c -  18 \lambda e^{-\frac{1}{2}} -  1.5 \lambda e^{-\frac{1}{2}}  +  30 \lambda e^{-1}  -  6 \lambda e +  6 \lambda e^{\frac{1}{2}} +  1.5 \lambda e^{\frac{1}{2}} -0.0257513 = 0$$
