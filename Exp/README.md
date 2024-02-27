@@ -18,8 +18,11 @@
 # $$F^{'}_d = 6 \lambda c + \frac{3}{8} \lambda c   +  \frac{1}{16} a +  \frac{1}{96} c -  18 \lambda e^{-\frac{1}{2}} -  1.5 \lambda e^{-\frac{1}{2}}  +  30 \lambda e^{-1} +  6  e^{\frac{1}{2}} +  \frac{5}{4}  e^{\frac{1}{2}} -  18  e^{-\frac{1}{2}} - \frac{7}{4}  e^{-\frac{1}{2}} -  6 \lambda e +  6 \lambda e^{\frac{1}{2}} +  1.5 \lambda e^{\frac{1}{2}} = 0$$
 
 ---
+
 +++
+
 ---
+
 
 # $$F^{'}_a = \frac{1}{2} b +  \frac{1}{16} d -2.08438 = 0$$
 
