@@ -1,3 +1,5 @@
+# $$F = \int_{-1.0}^{+1.0} (e^x - p(x)) ^2 dx + \lambda \cdot \int_{-1.0}^{+1.0} (e^x - p'(x)) ^2 dx$$
+
 # p(x) =  a + b*x + c*x^2 + d*x^3
 ## p'(x) =    b + 2c*x + 3d*x^2
 ## p''(x) =    2c + 6d*x
